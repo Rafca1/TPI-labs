@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function adunare() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let sum = a + b;
+        document.getElementById("rezultat").textContent = sum;
+      }
+      function scadere() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let substract = a - b;
+        document.getElementById("rezultat").textContent = substract;
+      }
+      function inmultire() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let multiply = a * b;
+        document.getElementById("rezultat").textContent = multiply;
+      }
+      function impartire() {
+        let a = parseFloat(document.getElementById("a").value);
+        let b = parseFloat(document.getElementById("b").value);
+        let divide = a / b;
+        document.getElementById("rezultat").textContent = divide;
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="a">A:</label>
+    <input type="number" id="a" name="A" size="10" /><br />
+    <label for="b">B:</label>
+    <input type="number" id="b" name="B" size="10" /><br />
+    <br />
+    <div style="margin-left: 20px">
+      <button onclick="adunare()">+</button>
+      <button onclick="scadere()">-</button>
+      <button onclick="inmultire()">*</button>
+      <button onclick="impartire()">/</button>
+    </div>
+    <br />
+    <p
+      id="rezultat"
+      style="
+        border: 1px solid black;
+        height: 20px;
+        width: 170px;
+        margin-left: 18px;
+      "
+    ></p>
+  </body>
+</html>

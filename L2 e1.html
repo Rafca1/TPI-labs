@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function getDistance() {
+        let x1 = parseFloat(document.getElementById("x1").value);
+        let y1 = parseFloat(document.getElementById("y1").value);
+        let x2 = parseFloat(document.getElementById("x2").value);
+        let y2 = parseFloat(document.getElementById("y2").value);
+        let x = x2 - x1;
+        let y = y2 - y1;
+        document.getElementById("rezultat").textContent = Math.sqrt(
+          x * x + y * y
+        );
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="x1">x1:</label>
+    <input type="number" id="x1" name="X1" size="10" /><br />
+    <label for="y1">y1:</label>
+    <input type="number" id="y1" name="Y1" size="10" /><br />
+    <label for="x2">x2:</label>
+    <input type="number" id="x2" name="X2" size="10" /><br />
+    <label for="y2">y2:</label>
+    <input type="number" id="y2" name="Y2" size="10" /><br />
+    <div>
+      <button onclick="getDistance()">Calculeaza</button>
+    </div>
+    <p
+      id="rezultat"
+      style="
+        border: 1px solid black;
+        height: 20px;
+        width: 170px;
+        margin-left: 18px;
+      "
+    ></p>
+  </body>
+</html>

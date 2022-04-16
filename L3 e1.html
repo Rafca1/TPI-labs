@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+ function countVowel(string){
+    const count = string.match(/[aeiou]/gi).length;
+    return count;
+ }
+ function nrVocale(){
+   const string = prompt('Introduceti un string: ');
+ const result = countVowel(string);
+ console.log(result);
+ alert(result);
+ }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+   <button onclick="nrVocale()">Nr vocale</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+function verifica(){
+    let x = parseFloat(document.getElementById("x").value);
+    let y = parseFloat(document.getElementById("y").value);
+    let z = parseFloat(document.getElementById("z").value);
+    
+    let verificare = false;
+    if (x + y === z){
+        document.getElementById("raspuns").textContent=`x + y = z => ${x} + ${y} = ${z}`;
+    }else if (x - y === z){
+        document.getElementById("raspuns").textContent=`x - y = z => ${x} - ${y} = ${z}`;
+    }else if (x * y === z){
+        document.getElementById("raspuns").textContent=`x * y = z => ${x} * ${y} = ${z}`;
+    }else if (x / y === z){
+        document.getElementById("raspuns").textContent=`x / y = z => ${x} / ${y} = ${z}`;
+    }else {
+        document.getElementById("raspuns").textContent=`niciun operator nu convine lui $`;
+    }
+}
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> x $ y = z</h1>
+  <label for="x">x:</label>
+  <input type="number" id="x" name="X" size="10" /><br />
+  <label for="y">y:</label>
+  <input type="number" id="y" name="Y" size="10" /><br />
+  <label for="z">z:</label>
+  <input type="number" id="z" name="Z" size="10" /><br />
+  <button onclick="verifica()">Verifica</button>
+  <h1 id = "raspuns"></h1>
+</body>
+</html>
